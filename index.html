@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小恒 — 个人作品集</title>
+  <meta name="description" content="个人作品集：项目作品、技能方向与联系方式" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+</head>
+<body>
+
+  <!-- 弥散渐变背景 -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- 顶部导航（悬浮胶囊） -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">小恒<span class="logo-dot"></span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#works">作品</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a href="#contact" class="nav-cta">保持联系</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <p class="badge reveal">👋 你好，我是小恒 · 软件工程专业在读</p>
+      <h1 class="headline">
+        <span class="reveal" style="--d:.05s">用 AI 把想法</span>
+        <span class="reveal" style="--d:.15s">做成<em class="grad-text">好看又好用</em>的东西</span>
+      </h1>
+      <p class="subline reveal" style="--d:.3s">
+        广州软件学院学生，关注 AI 辅助开发与大语言模型技术。<br />
+        平时用 Python、Java 和 TypeScript 做项目，也在持续探索前后端开发与数据可视化。
+      </p>
+      <div class="hero-actions reveal" style="--d:.45s">
+        <a href="#works" class="btn btn-primary">看看作品</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+      <ul class="hero-stats reveal" style="--d:.6s">
+        <li><b>4</b><span>个已完成项目</span></li>
+        <li><b>300+</b><span>拾光集市注册用户</span></li>
+        <li><b>3</b><span>门主力编程语言</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 项目作品（由 script.js 依据 data.js 渲染） -->
+  <main>
+  <section class="section works" id="works">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="badge badge-sm">SELECTED WORKS</p>
+        <h2 class="section-title">项目作品</h2>
+        <p class="section-note">每个项目都是一次从想法到落地的完整实践</p>
+      </div>
+      <div class="projects" id="projects"><!-- 渲染于此 --></div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-left reveal">
+        <p class="badge badge-sm">ABOUT ME</p>
+        <h2 class="section-title">关于我</h2>
+        <p class="about-lead">
+          关注 AI 辅助开发与大语言模型技术——让想法更快变成能用的产品。
+        </p>
+      </div>
+      <div class="about-right reveal" style="--d:.1s">
+        <p class="about-text">
+          我是一名软件工程专业的学生，目前就读于广州软件学院。平时主要使用 Python、Java 和
+          TypeScript 进行项目开发，也在持续学习前后端开发、数据可视化和 AI 应用构建。
+          这个网站收录了我从课程作业到独立完成的四个项目。
+        </p>
+        <div class="skills" id="skills"><!-- 技能方向渲染于此 --></div>
+        <ul class="about-meta">
+          <li><span>专业</span>软件工程</li>
+          <li><span>方向</span>AI 辅助开发 / 大语言模型应用</li>
+          <li><span>所在城市</span>中国 · 广州</li>
+          <li><span>状态</span>广州软件学院 · 在读</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <p class="badge badge-sm badge-light">CONTACT</p>
+        <h2 class="contact-title">有想法？一起做点什么</h2>
+        <p class="contact-sub">欢迎项目合作、技术交流与实习机会，通常会在 24 小时内回复。</p>
+        <div class="contact-links" id="contactLinks"><!-- 链接渲染于此 --></div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 小恒 XIAO HENG</span>
+      <span>Built with HTML · CSS · JS</span>
+    </div>
+  </footer>
+
+  <script src="data.js?v=6"></script>
+  <script src="script.js?v=6"></script>
+</body>
+</html>
