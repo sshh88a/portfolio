@@ -71,6 +71,16 @@ const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 24);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
+/* ---------- 深浅色主题切换（选择由 index.html 内联脚本提前应用） ---------- */
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  try {
+    localStorage.setItem("theme", next);
+  } catch (e) {}
+});
+
 /* ---------- 移动端菜单 ---------- */
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
